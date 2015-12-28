@@ -33,4 +33,4 @@ function onPageLoad() {
         event.preventDefault();
     });
 }
-//# sourceMappingURL=bootstrapkb.js.map
+//# sourceMappingURL=bsvirtualkb.js.map

@@ -13,7 +13,7 @@ gulp.task('clean', function () {
         .pipe(clean({force: true}));
 });
 gulp.task('inject', ['clean'], function () {
-    return gulp.src('bootstrapkb.html')
+    return gulp.src('bsvirtualkb.html')
         .pipe(injectfile({
             // <filename> token will be replaced by the actual filename
             pattern: '/\\*\\sinject:\\s<filename>\\s\\*/'
