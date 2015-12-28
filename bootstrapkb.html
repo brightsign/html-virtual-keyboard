@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        /* bootstrap.min.css */
+        /* inject: bower_components/bootstrap/dist/css/bootstrap.min.css */
+        /* bootstrap-theme.min.css */
+        /* inject: bower_components/bootstrap/dist/css/bootstrap-theme.min.css */
+        /* keyboard.css */
+        /* inject: keyboard.css */
+    </style>
+    <script>
+        /* bootstrapkb.js */
+        /* inject: bootstrapkb.js */
+    </script>
+</head>
+<body onload="onPageLoad()">
+<div>
+    <div class="ui-keyboard ui-keyboard-container center-block dropdown-menu ui-keyboard-has-focus" role="textbox" id="keyboard_keyboard">
+        <div class="ui-keyboard-keyset ui-keyboard-keyset-normal" style="display: inline-block;">
+            <button role="button" type="button" class="ui-keyboard-button ui-keyboard-96 btn btn-default"
+                    onclick="SendKey('`')">
+                <span class="ui-keyboard-text">`</span>
+            </button>
+            <button role="button" type="button" class="ui-keyboard-button ui-keyboard-1 btn btn-default"
+                    onclick="SendKey('1')">
+                <span class="ui-keyboard-text">1</span>
+            </button>
+            <button role="button" type="button" class="ui-keyboard-button ui-keyboard-2 btn btn-default"
+                    onclick="SendKey('2')">
+                <span class="ui-keyboard-text">2</span>
+            </button>
+            <button role="button" type="button" class="ui-keyboard-button ui-keyboard-3 btn btn-default"
+                    onclick="SendKey('3')">
+                <span class="ui-keyboard-text">3</span>
+            </button>
+            <button role="button" type="button" class="ui-keyboard-button ui-keyboard-4 btn btn-default"
+                    onclick="SendKey('4')">
+                <span class="ui-keyboard-text">4</span>
+            </button>
+            <button role="button" type="button" class="ui-keyboard-button ui-keyboard-5 btn btn-default"
+                    onclick="SendKey('5')">
+                <span class="ui-keyboard-text">5</span>
+            </button>
+            <button role="button" type="button" class="ui-keyboard-button ui-keyboard-6 btn btn-default"
+                    onclick="SendKey('6')">
+                <span class="ui-keyboard-text">6</span>
+            </button>
+            <button role="button" type="button" class="ui-keyboard-button ui-keyboard-7 btn btn-default"
+                    onclick="SendKey('7')">
+                <span class="ui-keyboard-text">7</span>
+            </button>
+            <button role="button" type="button" class="ui-keyboard-button ui-keyboard-8 btn btn-default"
+                    onclick="SendKey('8')">
+                <span class="ui-keyboard-text">8</span>
+            </button>
+            <button role="button" type="button" class="ui-keyboard-button ui-keyboard-9 btn btn-default"
+                    onclick="SendKey('9')">
+                <span class="ui-keyboard-text">9</span>
+            </button>
+            <button role="button" type="button" class="ui-keyboard-button ui-keyboard-0 btn btn-default"
+                    onclick="SendKey('0')">
+                <span class="ui-keyboard-text">0</span>
+            </button>
+            <button role="button" type="button" class="ui-keyboard-button btn btn-default" onclick="SendKey('-')">
+                <span class="ui-keyboard-text">-</span>
+            </button>
+            <button role="button" type="button" class="ui-keyboard-button ui-keyboard-61 btn btn-default"
+                    onclick="SendKey('=')">
+                <span class="ui-keyboard-text">=</span>
+            </button>
+            <button role="button" type="button"
+                    class="ui-keyboard-button ui-keyboard-bksp ui-keyboard-widekey ui-keyboard-actionkey btn btn-default"
+                    title="Backspace" onclick="SendKey('BACKSPACE')">
+                <span class="ui-keyboard-text">Bksp</span>
+            </button>
+            <br class="ui-keyboard-button-endrow">
+            <button role="button" type="button"
+                    class="ui-keyboard-button ui-keyboard-tab ui-keyboard-widekey ui-keyboard-actionkey btn btn-default"
+                    title="Tab" onclick="SendKey('tab')">
+                <span class="ui-keyboard-text">⇥ Tab</span>
+            </button>
+            <button role="button" type="button" class="ui-keyboard-button ui-keyboard-q btn btn-default"
+                    onclick="SendKey('q')">
+                <span class="ui-keyboard-text">q</span>
+            </button>
+            <button role="button" type="button" class="ui-keyboard-button ui-keyboard-w btn btn-default"
+                    onclick="SendKey('w')">
+                <span class="ui-keyboard-text">w</span>
+            </button>
+            <button role="button" type="button" class="ui-keyboard-button ui-keyboard-e btn btn-default"
+                    onclick="SendKey('e')">
+                <span class="ui-keyboard-text">e</span>
+            </button>
+            <button role="button" type="button" class="ui-keyboard-button ui-keyboard-r btn btn-default"
+                    onclick="SendKey('r')">
+                <span class="ui-keyboard-text">r</span>
+            </button>
+            <button role="button" type="button" class="ui-keyboard-button ui-keyboard-t btn btn-default"
+                    onclick="SendKey('t')">
+                <span class="ui-keyboard-text">t</span>
+            </button>
+            <button role="button" type="button" class="ui-keyboard-button ui-keyboard-y btn btn-default"
+                    onclick="SendKey('y')">
+                <span class="ui-keyboard-text">y</span>
+            </button>
+            <button role="button" type="button" class="ui-keyboard-button ui-keyboard-u btn btn-default"
+                    onclick="SendKey('u')">
+                <span class="ui-keyboard-text">u</span>
+            </button>
+            <button role="button" type="button" class="ui-keyboard-button ui-keyboard-i btn btn-default"
+                    onclick="SendKey('i')">
+                <span class="ui-keyboard-text">i</span>
+            </button>
+            <button role="button" type="button" class="ui-keyboard-button ui-keyboard-o btn btn-default"
+                    onclick="SendKey('o')">
+                <span class="ui-keyboard-text">o</span>
+            </button>
+            <button role="button" type="button" class="ui-keyboard-button ui-keyboard-p btn btn-default"
+                    onclick="SendKey('p')">
+                <span class="ui-keyboard-text">p</span>
+            </button>
+            <button role="button" type="button" class="ui-keyboard-button ui-keyboard-91 btn btn-default"
+                    onclick="SendKey('[')">
+                <span class="ui-keyboard-text">[</span>
+            </button>
+            <button role="button" type="button" class="ui-keyboard-button ui-keyboard-93 btn btn-default"
+                    onclick="SendKey(']')">
+                <span class="ui-keyboard-text">]</span>
+            </button>
+            <button role="button" type="button" class="ui-keyboard-button ui-keyboard-92 btn btn-default"
+                    onclick="SendKey('\\')">
+                <span class="ui-keyboard-text">\</span>
+            </button>
+            <br class="ui-keyboard-button-endrow">
+            <button role="button" type="button" class="ui-keyboard-button ui-keyboard-a btn btn-default"
+                    onclick="SendKey('a')">
+                <span class="ui-keyboard-text">a</span>
+            </button>
+            <button role="button" type="button" class="ui-keyboard-button ui-keyboard-s btn btn-default"
+                    onclick="SendKey('s')">
+                <span class="ui-keyboard-text">s</span>
+            </button>
+            <button role="button" type="button" class="ui-keyboard-button ui-keyboard-d btn btn-default"
+                    onclick="SendKey('d')">
+                <span class="ui-keyboard-text">d</span>
+            </button>
+            <button role="button" type="button" class="ui-keyboard-button ui-keyboard-f btn btn-default"
+                    onclick="SendKey('f')">
+                <span class="ui-keyboard-text">f</span>
+            </button>
+            <button role="button" type="button" class="ui-keyboard-button ui-keyboard-g btn btn-default"
+                    onclick="SendKey('g')">
+                <span class="ui-keyboard-text">g</span>
+            </button>
+            <button role="button" type="button" class="ui-keyboard-button ui-keyboard-h btn btn-default"
+                    onclick="SendKey('h')">
+                <span class="ui-keyboard-text">h</span>
+            </button>
+            <button role="button" type="button" class="ui-keyboard-button ui-keyboard-j btn btn-default"
+                    onclick="SendKey('j')">
+                <span class="ui-keyboard-text">j</span>
+            </button>
+            <button role="button" type="button" class="ui-keyboard-button ui-keyboard-k btn btn-default"
+                    onclick="SendKey('k')">
+                <span class="ui-keyboard-text">k</span>
+            </button>
+            <button role="button" type="button" class="ui-keyboard-button ui-keyboard-l btn btn-default"
+                    onclick="SendKey('l')">
+                <span class="ui-keyboard-text">l</span>
+            </button>
+            <button role="button" type="button" class="ui-keyboard-button ui-keyboard-59 btn btn-default"
+                    onclick="SendKey(';')">
+                <span class="ui-keyboard-text">;</span>
+            </button>
+            <button role="button" type="button" class="ui-keyboard-button ui-keyboard-39 btn btn-default"
+                    onclick="SendKey('\'')">
+                <span class="ui-keyboard-text">'</span>
+            </button>
+            <button role="button" type="button"
+                    class="ui-keyboard-button ui-keyboard-enter ui-keyboard-widekey ui-keyboard-actionkey btn btn-primary active"
+                    title="Enter ⏎" onclick="SendKey('ENTER')">
+                <span class="ui-keyboard-text">Enter</span>
+            </button>
+            <br class="ui-keyboard-button-endrow">
+            <button role="button" type="button"
+                    class="ui-keyboard-button ui-keyboard-shift ui-keyboard-widekey ui-keyboard-actionkey btn btn-default ui-keyboard-hasactivestate"
+                    title="Shift" onclick="toggleCase()">
+                <span class="ui-keyboard-text">Shift</span>
+            </button>
+            <button role="button" type="button" class="ui-keyboard-button ui-keyboard-z btn btn-default"
+                    onclick="SendKey('z')">
+                <span class="ui-keyboard-text">z</span>
+            </button>
+            <button role="button" type="button" class="ui-keyboard-button ui-keyboard-x btn btn-default"
+                    onclick="SendKey('x')">
+                <span class="ui-keyboard-text">x</span>
+            </button>
+            <button role="button" type="button" class="ui-keyboard-button ui-keyboard-c btn btn-default"
+                    onclick="SendKey('c')">
+                <span class="ui-keyboard-text">c</span>
+            </button>
+            <button role="button" type="button" class="ui-keyboard-button ui-keyboard-v btn btn-default"
+                    onclick="SendKey('v')">
+                <span class="ui-keyboard-text">v</span>
+            </button>
+            <button role="button" type="button" class="ui-keyboard-button ui-keyboard-b btn btn-default"
+                    onclick="SendKey('b')">
+                <span class="ui-keyboard-text">b</span>
+            </button>
+            <button role="button" type="button" class="ui-keyboard-button ui-keyboard-n btn btn-default"
+                    onclick="SendKey('n')">
+                <span class="ui-keyboard-text">n</span>
+            </button>
+            <button role="button" type="button" class="ui-keyboard-button ui-keyboard-m btn btn-default"
+                    onclick="SendKey('m')">
+                <span class="ui-keyboard-text">m</span>
+            </button>
+            <button role="button" type="button" class="ui-keyboard-button ui-keyboard-44 btn btn-default"
+                    onclick="SendKey(',')">
+                <span class="ui-keyboard-text">,</span>
+            </button>
+            <button role="button" type="button" class="ui-keyboard-button ui-keyboard-46 btn btn-default"
+                    onclick="SendKey('.')">
+                <span class="ui-keyboard-text">.</span>
+            </button>
+            <button role="button" type="button" class="ui-keyboard-button ui-keyboard-47 btn btn-default"
+                    onclick="SendKey('/')">
+                <span class="ui-keyboard-text">/</span>
+            </button>
+            <button role="button" type="button"
+                    class="ui-keyboard-button ui-keyboard-shift ui-keyboard-widekey ui-keyboard-actionkey btn btn-default ui-keyboard-hasactivestate"
+                    title="Shift" onclick="toggleCase()">
+                <span class="ui-keyboard-text">Shift</span>
+            </button>
+            <br class="ui-keyboard-button-endrow">
+            <button role="button" type="button"
+                    class="ui-keyboard-button ui-keyboard-accept ui-keyboard-widekey ui-keyboard-actionkey btn btn-primary active"
+                    title="Accept" onclick="SendKey('ENTER')">
+                <span class="ui-keyboard-text">Accept</span>
+            </button>
+            <button role="button" type="button"
+                    class="ui-keyboard-button ui-keyboard-space ui-keyboard-actionkey btn btn-default" title="Space"
+                    onclick="SendKey(' ')">
+                <span class="ui-keyboard-text"></span>
+            </button>
+            <button role="button" type="button"
+                    class="ui-keyboard-button ui-keyboard-cancel ui-keyboard-widekey ui-keyboard-actionkey btn btn-warning active"
+                    title="Cancel" onclick="SendKey('cancel')">
+                <span class="ui-keyboard-text">Cancel</span>
+            </button>
+            <br class="ui-keyboard-button-endrow"></div>
+    </div>
+</div>
+</body>
+</html>
