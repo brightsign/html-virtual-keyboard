@@ -7,7 +7,8 @@
   "devDependencies": {
     "gulp": "^3.9.0",
     "gulp-clean": "^0.3.1",
-    "gulp-inject-file": "0.0.14"
+    "gulp-useref": "^3.0.0",
+    "main-bower-files": "^2.9.0"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
