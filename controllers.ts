@@ -2,11 +2,12 @@
  * Created by jsinai on 2/16/16.
  */
 /// <reference path="app.ts"/>
+/// <reference path="layouts.ts"/>
 
-bsApp.controller('bsController', function ($scope, $filter, $translate, bsState) {
+bsApp.controller('bsController', function ($scope, $filter, $translate, bsState, bsLayouts) {
 
     $scope.getKeys = function (row) {
-        return bsState.getKeys(row);
+        return bsLayouts.getKeys(row);
     };
     $scope.getKey = function (key) {
         if (key.length>1){
@@ -57,13 +58,17 @@ bsApp.controller('bsController', function ($scope, $filter, $translate, bsState)
     };
     $scope.loadLayout = function () {
         var layout = $scope.upper ? ($scope.alt ? 'alt-shift' : 'shift') : ($scope.alt ? 'alt' : 'normal');
-        $scope.rows = bsState.getLayout($scope.lang, layout);
+        $scope.rows = bsLayouts.getLayout($scope.lang, layout);
     };
     $scope.setLang=function(lang) {
         $scope.lang = lang;
         $translate.use($scope.lang);
         $scope.loadLayout();
     };
+    bsState.loadConfig().then(function (ret) {
+        $scope.config = ret.data;
+        $scope.langs = $scope.config.languages;
+    });
     $scope.lang = 'en';
     $scope.upper = false;
     $scope.alt = false;

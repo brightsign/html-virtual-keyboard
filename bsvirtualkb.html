@@ -18,10 +18,8 @@
                     class="ui-keyboard-button btn" ng-click="clickMe(key)">
                 <span class="ui-keyboard-text">{{getKey(key)}}</span>
             </button>
-            <select class="ui-keyboard-button btn btn-default" title="Language" ng-show="key=='tab'" ng-model="lang"
-                    ng-change="setLang(lang)">
-                <option value="en">En</option>
-                <option value="fr">Fr</option>
+            <select class="ui-keyboard-button btn btn-info" title="Language" ng-show="key=='tab'" ng-model="lang"
+                    ng-change="setLang(lang)" ng-options="lang for lang in langs">
             </select>
             </span>
             <br class="ui-keyboard-button-endrow">
@@ -29,10 +27,11 @@
     </div>
 </div>
 <!--build:js js/all.js -->
-<script src="bower_components/angular/angular.min.js"></script>
+<script src="bower_components/angular/angular.js"></script>
 <script src="bower_components/angular-translate/angular-translate.min.js"></script>
 <script src="bower_components/angular-sanitize/angular-sanitize.min.js"></script>
 <script src="app.js"></script>
+<script src="layouts.js"></script>
 <script src="services.js"></script>
 <script src="controllers.js"></script>
 <!-- endbuild -->
