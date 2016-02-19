@@ -31,6 +31,9 @@ bsApp.controller('bsController', function ($scope, $filter, $translate, bsState,
     };
     $scope.clickMe = function (key) {
         switch (key) {
+            case 'space':
+                bsState.sendKey(' ');
+                break;
             case 'enter':
                 bsState.sendKey('ENTER');
                 break;
