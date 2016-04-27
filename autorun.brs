@@ -3,10 +3,11 @@ h1=createobject("rohtmlwidget",r1)
 h1.seturl("http://www.google.co.uk")
 ' Uncomment the following for portrait mode
 'h1.settransform("rot90")
+h1.StartInspectorServer(2999)
 h1.show()
 
 ' Comment the following for portrait mode
-rv=createobject("rorectangle",660,880,600,200)
+rv=createobject("rorectangle", 0, 0, 1920, 1080)
 ' Uncomment the following for portrait mode
 'rv=createobject("rorectangle",1720,240,200,600)
 v=createobject("rovirtualkeyboard",rv)

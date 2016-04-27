@@ -3,7 +3,9 @@
   "version": "1.0.0",
   "description": "",
   "main": "bootstrapkb.js",
-  "dependencies": {},
+  "dependencies": {
+    "event-stream": "^3.3.2"
+  },
   "devDependencies": {
     "gulp": "^3.9.0",
     "gulp-clean": "^0.3.1",

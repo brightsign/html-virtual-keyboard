@@ -8,9 +8,10 @@
     <link rel="stylesheet" href="keyboard.css">
     <!-- endbuild -->
 </head>
-<body ng-app="bsApp" ng-controller="bsController">
-<div class="ui-keyboard ui-keyboard-container center-block dropdown-menu ui-keyboard-has-focus" role="textbox"
+<body ng-app="bsApp" ng-controller="bsController" style="background-color: rgba(0,0,0,0)">
+<div class="ui-keyboard ui-keyboard-container center-block dropdown-menu ui-keyboard-has-focus draggable" role="textbox"
      id="keyboard_keyboard">
+    <div class="drag-bar"></div>
     <div class="ui-keyboard-keyset ui-keyboard-keyset-normal" style="display: inline-block;">
             <span ng-repeat="row in rows">
             <span ng-repeat="key in getKeys(row) track by $index">
@@ -27,6 +28,7 @@
     </div>
 </div>
 <!--build:js js/all.js -->
+<script src="bower_components/interact/interact.js"></script>
 <script src="bower_components/angular/angular.js"></script>
 <script src="bower_components/angular-translate/angular-translate.min.js"></script>
 <script src="bower_components/angular-sanitize/angular-sanitize.min.js"></script>

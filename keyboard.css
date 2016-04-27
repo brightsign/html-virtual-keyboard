@@ -374,3 +374,6 @@ div.ui-keyboard-container {
     backface-visibility: hidden;
     z-index: 100
 }
+
+/* Dydo */
+.drag-bar {height: 10px; margin:4px 0; cursor: move; background: #737373; }
