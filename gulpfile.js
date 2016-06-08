@@ -3,6 +3,7 @@ var mainBowerFiles = require('main-bower-files');
 var useref = require('gulp-useref');
 var clean = require('gulp-clean');
 var es = require('event-stream');
+const zip = require('gulp-zip');
 
 var dest = './dest';
 
@@ -21,4 +22,11 @@ gulp.task('useref', ['clean'], function () {
     );
 });
 
-gulp.task('default', ['clean', 'useref']);
+gulp.task('zip', ['clean'], function () {
+    return gulp.src(['bsvirtualkb.html', 'bsvirtualkb.json'])
+            .pipe(useref())
+            .pipe(zip('keyboard.zip'))
+            .pipe(gulp.dest('./presentation'));
+});
+
+gulp.task('default', ['clean', 'useref', 'zip']);

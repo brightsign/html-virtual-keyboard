@@ -7,7 +7,7 @@ h1.StartInspectorServer(2999)
 h1.show()
 
 ' Comment the following for portrait mode
-rv=createobject("rorectangle", 0, 0, 1920, 1080)
+rv=createobject("rorectangle", 660,880,600,200)
 ' Uncomment the following for portrait mode
 'rv=createobject("rorectangle",1720,240,200,600)
 v=createobject("rovirtualkeyboard",rv)

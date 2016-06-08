@@ -68,7 +68,7 @@ function SendKey(key) {
     if (upper) {
         toSend = key.toUpperCase();
     }
-    console.log("Sending key " + toSend);
+    //console.log("Sending key " + toSend);
     vk.SendKey(toSend);
 }
 function toggleCase() {
