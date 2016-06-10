@@ -12,7 +12,7 @@ bsApp.factory('bsVirtualKb',
 bsApp.service('bsState',
     function ($http, bsVirtualKb) {
         this.sendKey = function (key) {
-            console.log("Sending key " + key);
+            //console.log("Sending key " + key);
             bsVirtualKb.SendKey(key);
         };
         this.hide = function () {
