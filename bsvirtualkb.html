@@ -14,19 +14,28 @@
     <div class="ui-keyboard-keyset ui-keyboard-keyset-normal" style="display: inline-block;">
             <span ng-repeat="row in rows">
             <span ng-repeat="key in getKeys(row) track by $index">
-            <button ng-hide="key=='tab'" role="button" type="button" ng-class="getClasses(key)"
+            <button ng-if="key!='tab'" role="button" type="button" ng-class="getClasses(key)"
                     class="ui-keyboard-button btn" ng-click="clickMe(key)">
                 <span class="ui-keyboard-text">{{getKey(key)}}</span>
             </button>
-            <select class="ui-keyboard-button btn btn-info" title="Language" ng-show="key=='tab'" ng-model="lang"
-                    ng-change="setLang(lang)" ng-options="lang for lang in langs">
-            </select>
+            <span ng-if="key=='tab'" class="dropdown">
+                <button class="btn btn-default dropdown-toggle" title="Language" type="button" id="languageDropdownMenu"
+                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" ng-model="lang">
+                    {{lang}}
+                    <span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu" aria-labelledby="languageDropdownMenu">
+                    <li ng-repeat="lang in langs" ng-click="setLang(lang)">{{lang}}</li>
+                </ul>
+            </span>
             </span>
             <br class="ui-keyboard-button-endrow">
             </span>
     </div>
 </div>
 <!--build:js js/all.js -->
+<script src="bower_components/jquery/jquery.min.js"></script>
+<script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
 <script src="bower_components/angular/angular.js"></script>
 <script src="bower_components/angular-translate/angular-translate.min.js"></script>
 <script src="bower_components/angular-sanitize/angular-sanitize.min.js"></script>
