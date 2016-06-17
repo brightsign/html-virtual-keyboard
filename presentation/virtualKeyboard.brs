@@ -8,6 +8,7 @@ REM
 Function virtualKeyboard_Initialize(msgPort As Object, userVariables As Object, bsp As Object)
   return {
     objectName :      "virtualKeyboard_object",
+    version:          1.0,
     msgPort :         msgPort,
     userVariables :   userVariables,
     bsp :             bsp,
