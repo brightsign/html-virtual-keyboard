@@ -3,6 +3,10 @@ var mainBowerFiles = require('main-bower-files');
 var useref = require('gulp-useref');
 var clean = require('gulp-clean');
 var es = require('event-stream');
+var uglify = require('gulp-uglify');
+var minifyCss = require('gulp-minify-css');
+var ngAnnotate = require('gulp-ng-annotate');
+var gulpif = require('gulp-if');
 const zip = require('gulp-zip');
 
 var dest = './dest';
@@ -24,9 +28,12 @@ gulp.task('useref', ['clean'], function () {
 
 gulp.task('zip', ['clean'], function () {
     return gulp.src(['bsvirtualkb.html', 'bsvirtualkb.json'])
-            .pipe(useref())
-            .pipe(zip('keyboard.zip'))
-            .pipe(gulp.dest('./presentation'));
+        .pipe(useref())
+        .pipe(gulpif('*.js', ngAnnotate()))
+        .pipe(gulpif('*.js', uglify()))
+        .pipe(gulpif('*.css', minifyCss()))
+        .pipe(zip('keyboard.zip'))
+        .pipe(gulp.dest('./presentation'));
 });
 
 gulp.task('default', ['clean', 'useref', 'zip']);
