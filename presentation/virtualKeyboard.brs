@@ -17,23 +17,21 @@ Function virtualKeyboard_Initialize(msgPort As Object, userVariables As Object, 
     ProcessEvent :    Function (event As Object)
       'Keyboard needs to be initialized after the target roHTMLWidget, in order to be rendered on top
 	  if m.virtualKeyboard = invalid
+	    vm = m.bsp.videomode
+		width = vm.getresx()
+		height = vm.getresy()
         keyboardPackage = createObject("roBrightPackage", m.bsp.assetPoolFiles.getPoolFilePath("keyboard.zip"))
         if type (keyboardPackage) = "roBrightPackage"
           createDirectory("virtualKeyboard")
           keyboardPackage.unpack("virtualKeyboard/")
         endif
-        if m.bsp.sign.monitorOrientation = "portrait" then
-		  rectangle = createobject("rorectangle",1720,240,200,600)
-		  transform = "rot90"
-		else if m.bsp.sign.monitorOrientation = "portraitbottomonright" then
-		  rectangle = createobject("rorectangle",200,240,200,600)
-		  transform = "rot270"
-		else
-          rectangle = createobject("rorectangle", 660,880,600,200)
-		  transform = ""
-		endif
+		rectangle = createObject("rorectangle", 0, 0, width, height)
         virtualKeyboard = createObject("roVirtualKeyboard", rectangle)
-        virtualKeyboard.SetTransform(transform)
+        if m.bsp.sign.monitorOrientation = "portrait" then
+		  virtualKeyboard.setTransform("rot90")
+		else if m.bsp.sign.monitorOrientation = "portraitbottomonright" then
+		  virtualKeyboard.setTransform("rot270")
+		endif
 		virtualKeyboard.setResource("file:///virtualKeyboard/bsvirtualkb.html")
         virtualKeyboard.setPort(m.msgPort)
 		m.virtualKeyboard = virtualKeyboard
@@ -51,6 +49,6 @@ Function virtualKeyboard_Initialize(msgPort As Object, userVariables As Object, 
         return true
       endif
       return false
-      End Function
+    End Function
   }
 End Function

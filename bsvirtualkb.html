@@ -9,30 +9,31 @@
     <!-- endbuild -->
 </head>
 <body ng-app="bsApp" ng-controller="bsController" style="background-color: rgba(0,0,0,0)">
-<div class="ui-keyboard ui-keyboard-container center-block dropdown-menu ui-keyboard-has-focus" role="textbox"
-     id="keyboard_keyboard">
-    <div class="ui-keyboard-keyset ui-keyboard-keyset-normal" style="display: inline-block;">
+<div id="empty_background" ng-click="clickMe('cancel')"></div>
+    <div class="ui-keyboard ui-keyboard-container center-block dropdown-menu ui-keyboard-has-focus" role="textbox"
+         id="keyboard_keyboard">
+        <div class="ui-keyboard-keyset ui-keyboard-keyset-normal" style="display: inline-block;">
             <span ng-repeat="row in rows">
-            <span ng-repeat="key in getKeys(row) track by $index">
-            <button ng-if="key!='tab'" role="button" type="button" ng-class="getClasses(key)"
-                    class="ui-keyboard-button btn" ng-click="clickMe(key)">
-                <span class="ui-keyboard-text">{{getKey(key)}}</span>
-            </button>
-            <span ng-if="key=='tab'" class="dropdown">
-                <button class="btn btn-default dropdown-toggle" title="Language" type="button" id="languageDropdownMenu"
-                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" ng-model="lang">
-                    {{lang}}
-                    <span class="caret"></span>
-                </button>
-                <ul class="dropdown-menu" aria-labelledby="languageDropdownMenu">
-                    <li ng-repeat="lang in langs" ng-click="setLang(lang)">{{lang}}</li>
-                </ul>
-            </span>
-            </span>
+                <span ng-repeat="key in getKeys(row) track by $index">
+                    <button ng-if="key!='tab'" role="button" type="button" ng-class="getClasses(key)"
+                            class="ui-keyboard-button btn" ng-click="clickMe(key)">
+                        <span class="ui-keyboard-text">{{getKey(key)}}</span>
+                    </button>
+                    <span ng-if="key=='tab'" class="dropdown">
+                        <button class="btn btn-default dropdown-toggle" title="Language" type="button" id="languageDropdownMenu"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" ng-model="lang">
+                            {{lang}}
+                            <span class="caret"></span>
+                        </button>
+                        <ul class="dropdown-menu" aria-labelledby="languageDropdownMenu">
+                            <li ng-repeat="lang in langs" ng-click="setLang(lang)">{{lang}}</li>
+                        </ul>
+                    </span>
+                </span>
             <br class="ui-keyboard-button-endrow">
             </span>
+        </div>
     </div>
-</div>
 <!--build:js js/all.js -->
 <script src="bower_components/jquery/jquery.min.js"></script>
 <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>

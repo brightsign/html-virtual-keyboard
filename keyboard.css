@@ -367,7 +367,7 @@ button.ui-keyboard-extender span {
 /* Sinai */
 div.ui-keyboard-container {
     position: fixed;
-    top: 50%;
+    top: 80%;
     left: 50%;
     margin-right: -50%;
     transform: translate(-50%, -50%) translateZ(0) scale(1.0, 1.0);
@@ -401,4 +401,9 @@ button.btn-default:hover{
 
 .btn-primary.active:focus {
     outline-width: 0px !important;
+}
+
+#empty_background {
+    width: 100%;
+    height: 1920px;
 }
