@@ -170,6 +170,16 @@
       </remoteHTMLSite>
     </htmlSites>
     <presentationIdentifiers>
+      <presentationIdentifier>
+        <name>portraitRight</name>
+        <presentationName>KeyboardPortraitBottomOnRight</presentationName>
+        <path>Z:\Projects\BrightSign\html-virtual-keyboard\presentation\KeyboardPortraitBottomOnRight.bpf</path>
+      </presentationIdentifier>
+      <presentationIdentifier>
+        <name>portraitLeft</name>
+        <presentationName>KeyboardPortraitBottomOnLeft</presentationName>
+        <path>Z:\Projects\BrightSign\html-virtual-keyboard\presentation\KeyboardPortraitBottomOnLeft.bpf</path>
+      </presentationIdentifier>
     </presentationIdentifiers>
     <additionalFileToPublish>Z:\Projects\BrightSign\html-virtual-keyboard\presentation\keyboard.zip</additionalFileToPublish>
     <DirectoryLocations>
@@ -179,7 +189,7 @@
       <Audio>Z:\Projects\BrightSign\html-virtual-keyboard\presentation</Audio>
       <Media>Z:\Projects\BrightSign\html-virtual-keyboard\presentation</Media>
       <Fonts>Z:\Projects\BrightSign\html-virtual-keyboard\presentation</Fonts>
-      <HTML>Z:\Projects\BrightSign\html-virtual-keyboard\dest</HTML>
+      <HTML>Z:\Projects\BrightSign\html-virtual-keyboard\presentation</HTML>
       <PluginScriptsAutoruns>Z:\Projects\BrightSign\html-virtual-keyboard\presentation</PluginScriptsAutoruns>
       <CSV>Z:\Projects\BrightSign\html-virtual-keyboard\presentation</CSV>
       <RFChannelScan>Z:\Projects\BrightSign\html-virtual-keyboard\presentation</RFChannelScan>
@@ -248,6 +258,214 @@
         </html5Item>
         <states>
           <initialState />
+        </states>
+      </playlist>
+    </zone>
+    <zone>
+      <name>New Zone</name>
+      <x>1731</x>
+      <y>313</y>
+      <width>131</width>
+      <height>103</height>
+      <type>Images</type>
+      <id>2</id>
+      <zoomValue>1</zoomValue>
+      <horizontalOffset>0</horizontalOffset>
+      <verticalOffset>0</verticalOffset>
+      <zoneSpecificParameters>
+        <imageMode>Scale to Fit</imageMode>
+      </zoneSpecificParameters>
+      <playlist>
+        <name>Playlist 1</name>
+        <type>interactive</type>
+        <states>
+          <initialState>Live Text</initialState>
+          <state>
+            <name>Live Text</name>
+            <x>116</x>
+            <y>84</y>
+            <width>114</width>
+            <height>97</height>
+            <id>0</id>
+            <templatePlaylistItem>
+              <stateName>Live Text</stateName>
+              <constantTextTemplateItem>
+                <text>portrait right</text>
+                <textWidget>
+                  <numberOfLines>1</numberOfLines>
+                  <delay>5</delay>
+                  <rotation>0</rotation>
+                  <alignment>left</alignment>
+                  <scrollingMethod>2</scrollingMethod>
+                </textWidget>
+                <widget>
+                  <foregroundTextColor a="255" r="160" g="160" b="160" />
+                  <backgroundTextColor a="255" r="0" g="0" b="0" />
+                  <font>System</font>
+                  <fontSize>0</fontSize>
+                </widget>
+                <backgroundColorSpecified>False</backgroundColorSpecified>
+                <x>23</x>
+                <y>46</y>
+                <width>86</width>
+                <height>15</height>
+                <layer>1</layer>
+              </constantTextTemplateItem>
+            </templatePlaylistItem>
+            <brightSignExitCommands>
+            </brightSignExitCommands>
+            <notes />
+          </state>
+          <transition>
+            <sourceMediaState>Live Text</sourceMediaState>
+            <userEvent>
+              <name>rectangularTouchEvent</name>
+              <parameters>
+                <x>0</x>
+                <y>0</y>
+                <width>130</width>
+                <height>102</height>
+              </parameters>
+            </userEvent>
+            <targetMediaState>Live Text</targetMediaState>
+            <displayMode>displayConnectingLine</displayMode>
+            <labelLocation>bottom</labelLocation>
+            <brightSignCmd>
+              <name>SwitchPresentation</name>
+              <customUI>True</customUI>
+              <command>
+                <name>switchPresentation</name>
+                <parameter>
+                  <name>useUserVariable</name>
+                  <uiElementName />
+                  <parameterValue>
+                    <parameterValueItemText>
+                      <value>false</value>
+                    </parameterValueItemText>
+                  </parameterValue>
+                  <itemName />
+                  <validationRule>-1</validationRule>
+                </parameter>
+                <parameter>
+                  <name>presentationName</name>
+                  <uiElementName />
+                  <parameterValue>
+                    <parameterValueItemText>
+                      <value>portraitRight</value>
+                    </parameterValueItemText>
+                  </parameterValue>
+                  <itemName />
+                  <validationRule>-1</validationRule>
+                </parameter>
+              </command>
+            </brightSignCmd>
+            <assignInputToUserVariable>False</assignInputToUserVariable>
+            <assignWildcardToUserVariable>False</assignWildcardToUserVariable>
+          </transition>
+        </states>
+      </playlist>
+    </zone>
+    <zone>
+      <name>New Zone</name>
+      <x>89</x>
+      <y>326</y>
+      <width>128</width>
+      <height>104</height>
+      <type>Images</type>
+      <id>3</id>
+      <zoomValue>1</zoomValue>
+      <horizontalOffset>0</horizontalOffset>
+      <verticalOffset>0</verticalOffset>
+      <zoneSpecificParameters>
+        <imageMode>Scale to Fit</imageMode>
+      </zoneSpecificParameters>
+      <playlist>
+        <name>Playlist 2</name>
+        <type>interactive</type>
+        <states>
+          <initialState>Live Text1</initialState>
+          <state>
+            <name>Live Text1</name>
+            <x>224</x>
+            <y>168</y>
+            <width>114</width>
+            <height>97</height>
+            <id>0</id>
+            <templatePlaylistItem>
+              <stateName>Live Text1</stateName>
+              <constantTextTemplateItem>
+                <text>portrait left</text>
+                <textWidget>
+                  <numberOfLines>1</numberOfLines>
+                  <delay>5</delay>
+                  <rotation>0</rotation>
+                  <alignment>left</alignment>
+                  <scrollingMethod>2</scrollingMethod>
+                </textWidget>
+                <widget>
+                  <foregroundTextColor a="255" r="160" g="160" b="160" />
+                  <backgroundTextColor a="255" r="0" g="0" b="0" />
+                  <font>System</font>
+                  <fontSize>0</fontSize>
+                </widget>
+                <backgroundColorSpecified>False</backgroundColorSpecified>
+                <x>1</x>
+                <y>33</y>
+                <width>117</width>
+                <height>21</height>
+                <layer>1</layer>
+              </constantTextTemplateItem>
+            </templatePlaylistItem>
+            <brightSignExitCommands>
+            </brightSignExitCommands>
+            <notes />
+          </state>
+          <transition>
+            <sourceMediaState>Live Text1</sourceMediaState>
+            <userEvent>
+              <name>rectangularTouchEvent</name>
+              <parameters>
+                <x>0</x>
+                <y>0</y>
+                <width>127</width>
+                <height>103</height>
+              </parameters>
+            </userEvent>
+            <targetMediaState>Live Text1</targetMediaState>
+            <displayMode>displayConnectingLine</displayMode>
+            <labelLocation>bottom</labelLocation>
+            <brightSignCmd>
+              <name>SwitchPresentation</name>
+              <customUI>True</customUI>
+              <command>
+                <name>switchPresentation</name>
+                <parameter>
+                  <name>useUserVariable</name>
+                  <uiElementName />
+                  <parameterValue>
+                    <parameterValueItemText>
+                      <value>false</value>
+                    </parameterValueItemText>
+                  </parameterValue>
+                  <itemName />
+                  <validationRule>-1</validationRule>
+                </parameter>
+                <parameter>
+                  <name>presentationName</name>
+                  <uiElementName />
+                  <parameterValue>
+                    <parameterValueItemText>
+                      <value>portraitLeft</value>
+                    </parameterValueItemText>
+                  </parameterValue>
+                  <itemName />
+                  <validationRule>-1</validationRule>
+                </parameter>
+              </command>
+            </brightSignCmd>
+            <assignInputToUserVariable>False</assignInputToUserVariable>
+            <assignWildcardToUserVariable>False</assignWildcardToUserVariable>
+          </transition>
         </states>
       </playlist>
     </zone>

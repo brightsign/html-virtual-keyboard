@@ -407,3 +407,13 @@ button.btn-default:hover{
     width: 100%;
     height: 1920px;
 }
+
+
+/* These two values control the overall size of the keyboard.   */
+.btn {
+    font-size: 1.6em;
+}
+
+.language-menu {
+    font-size: 1.6em;
+}
