@@ -7,15 +7,15 @@ h1.StartInspectorServer(2999)
 h1.show()
 
 ' Comment the following for portrait mode
-rv=createobject("rorectangle", 660,880,600,200)
-' Uncomment the following for portrait mode
-'rv=createobject("rorectangle",1720,240,200,600)
+rv=createobject("rorectangle", 0,0,1920,1080)
 v=createobject("rovirtualkeyboard",rv)
 ' Uncomment the following for portrait mode
 'v.settransform("rot90")
-v.setresource("file:///sd:/bsvirtualkb.html")
+v.setresource("file:///bsvirtualkb.html")
 
 t=createobject("rotouchscreen")
+
+'Comment this out to hide the cursor
 t.enablecursor(1)
 
 p = CreateObject("roMessagePort")
