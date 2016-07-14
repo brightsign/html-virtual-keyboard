@@ -1,7 +1,5 @@
 BrightSign HTML Virtual Keyboard
 ====================
-The repository is at:
-gitolite@bs-git01.brightsign:html-virtual-keyboard
 
 How to build bsvirtualkb.html
 ----------------
