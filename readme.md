@@ -1,5 +1,7 @@
 BrightSign HTML Virtual Keyboard
 ====================
+BrightSign virtual keyboard based on the [Mottie Keyboard](https://github.com/Mottie/Keyboard)
+
 
 How to build bsvirtualkb.html
 ----------------
@@ -40,3 +42,9 @@ To deploy the virtual keyboard in a BrightAuthor presentation, use the files in 
         - Under "Script Plugins" click "Add Script Plugin"
         - Select "virtualKeyboard.brs" and for the name enter "virtualKeyboard"
         
+
+Licensing
+-------------------
+* Keyboard code: MIT License for all versions.
+* Caret code by C. F., Wong (Cloudgen): MIT License
+* Layouts files: Most are under WTFPL, unless the file itself specifies otherwise.
