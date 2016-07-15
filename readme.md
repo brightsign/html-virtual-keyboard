@@ -1,6 +1,3 @@
-This repo is obsolete. Please see the Github version https://github.com/brightsign/html-virtual-keyboard
-
-
 BrightSign HTML Virtual Keyboard
 ====================
 BrightSign virtual keyboard based on the [Mottie Keyboard](https://github.com/Mottie/Keyboard)
