@@ -1,11 +1,11 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <BrightAuthor version="6" BrightAuthorVersion="4.4.0.15" type="project">
   <meta>
-    <name>KeyboardPres</name>
+    <name>KeyboardPortraitBottomOnRight</name>
     <isBackup>False</isBackup>
     <model>4K1142</model>
-    <videoMode>1920x1080x60p</videoMode>
-    <monitorOrientation>Landscape</monitorOrientation>
+    <videoMode>1280x720x60p</videoMode>
+    <monitorOrientation>PortraitBottomOnRight</monitorOrientation>
     <videoConnector>HDMI</videoConnector>
     <deviceWebPageDisplay>Standard</deviceWebPageDisplay>
     <alphabetizeVariableNames>True</alphabetizeVariableNames>
@@ -147,7 +147,7 @@
     <scriptPlugins>
       <scriptPlugin>
         <name>virtualKeyboard</name>
-        <path>Z:\Users\leedydo\Projects\BrightSign\html-virtual-keyboard\presentation\virtualKeyboard.brs</path>
+        <path>Y:\Projects\BrightSign\html-virtual-keyboard\presentation\virtualKeyboard.brs</path>
       </scriptPlugin>
     </scriptPlugins>
     <htmlSites>
@@ -171,7 +171,7 @@
     </htmlSites>
     <presentationIdentifiers>
     </presentationIdentifiers>
-    <additionalFileToPublish>Z:\Users\leedydo\Projects\BrightSign\html-virtual-keyboard\presentation\keyboard.zip</additionalFileToPublish>
+    <additionalFileToPublish>Y:\Projects\BrightSign\html-virtual-keyboard\presentation\keyboard.zip</additionalFileToPublish>
     <DirectoryLocations>
       <AllFiles>Y:\Projects\BrightSign\html-virtual-keyboard\presentation</AllFiles>
       <Image>Y:\Projects\BrightSign\html-virtual-keyboard\presentation</Image>
@@ -196,8 +196,8 @@
       <name>Video or Images</name>
       <x>0</x>
       <y>0</y>
-      <width>1920</width>
-      <height>1080</height>
+      <width>1280</width>
+      <height>720</height>
       <type>VideoOrImages</type>
       <id>1</id>
       <zoomValue>1</zoomValue>
@@ -240,7 +240,7 @@
           <htmlSiteName>Google</htmlSiteName>
           <enableExternalData>True</enableExternalData>
           <enableMouseEvents>True</enableMouseEvents>
-          <displayCursor>True</displayCursor>
+          <displayCursor>False</displayCursor>
           <hwzOn>False</hwzOn>
           <useUserStylesheet>False</useUserStylesheet>
           <userStylesheet />

@@ -4,7 +4,7 @@
     <name>KeyboardPres</name>
     <isBackup>False</isBackup>
     <model>4K1142</model>
-    <videoMode>1920x1080x60p</videoMode>
+    <videoMode>1280x720x60p</videoMode>
     <monitorOrientation>Landscape</monitorOrientation>
     <videoConnector>HDMI</videoConnector>
     <deviceWebPageDisplay>Standard</deviceWebPageDisplay>
@@ -196,8 +196,8 @@
       <name>Video or Images</name>
       <x>0</x>
       <y>0</y>
-      <width>1920</width>
-      <height>1080</height>
+      <width>1280</width>
+      <height>720</height>
       <type>VideoOrImages</type>
       <id>1</id>
       <zoomValue>1</zoomValue>

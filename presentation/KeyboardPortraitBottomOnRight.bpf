@@ -147,7 +147,7 @@
     <scriptPlugins>
       <scriptPlugin>
         <name>virtualKeyboard</name>
-        <path>Z:\Projects\BrightSign\html-virtual-keyboard\presentation\virtualKeyboard.brs</path>
+        <path>Y:\Projects\BrightSign\html-virtual-keyboard\presentation\virtualKeyboard.brs</path>
       </scriptPlugin>
     </scriptPlugins>
     <htmlSites>
@@ -171,23 +171,23 @@
     </htmlSites>
     <presentationIdentifiers>
     </presentationIdentifiers>
-    <additionalFileToPublish>Z:\Projects\BrightSign\html-virtual-keyboard\presentation\keyboard.zip</additionalFileToPublish>
+    <additionalFileToPublish>Y:\Projects\BrightSign\html-virtual-keyboard\presentation\keyboard.zip</additionalFileToPublish>
     <DirectoryLocations>
-      <AllFiles>Z:\Projects\BrightSign\html-virtual-keyboard\presentation</AllFiles>
-      <Image>Z:\Projects\BrightSign\html-virtual-keyboard\presentation</Image>
-      <Video>Z:\Projects\BrightSign\html-virtual-keyboard\presentation</Video>
-      <Audio>Z:\Projects\BrightSign\html-virtual-keyboard\presentation</Audio>
-      <Media>Z:\Projects\BrightSign\html-virtual-keyboard\presentation</Media>
-      <Fonts>Z:\Projects\BrightSign\html-virtual-keyboard\presentation</Fonts>
-      <HTML>Z:\Projects\BrightSign\html-virtual-keyboard\presentation</HTML>
-      <PluginScriptsAutoruns>Z:\Projects\BrightSign\html-virtual-keyboard\presentation</PluginScriptsAutoruns>
-      <CSV>Z:\Projects\BrightSign\html-virtual-keyboard\presentation</CSV>
-      <RFChannelScan>Z:\Projects\BrightSign\html-virtual-keyboard\presentation</RFChannelScan>
-      <Schedules>Z:\Projects\BrightSign\html-virtual-keyboard\presentation</Schedules>
-      <ReplacementMedia>Z:\Projects\BrightSign\html-virtual-keyboard\presentation</ReplacementMedia>
-      <UserVariables>Z:\Projects\BrightSign\html-virtual-keyboard\presentation</UserVariables>
-      <XModemFiles>Z:\Projects\BrightSign\html-virtual-keyboard\presentation</XModemFiles>
-      <ImportCommandFiles>Z:\Projects\BrightSign\html-virtual-keyboard\presentation</ImportCommandFiles>
+      <AllFiles>Y:\Projects\BrightSign\html-virtual-keyboard\presentation</AllFiles>
+      <Image>Y:\Projects\BrightSign\html-virtual-keyboard\presentation</Image>
+      <Video>Y:\Projects\BrightSign\html-virtual-keyboard\presentation</Video>
+      <Audio>Y:\Projects\BrightSign\html-virtual-keyboard\presentation</Audio>
+      <Media>Y:\Projects\BrightSign\html-virtual-keyboard\presentation</Media>
+      <Fonts>Y:\Projects\BrightSign\html-virtual-keyboard\presentation</Fonts>
+      <HTML>Y:\Projects\BrightSign\html-virtual-keyboard\presentation</HTML>
+      <PluginScriptsAutoruns>Y:\Projects\BrightSign\html-virtual-keyboard\presentation</PluginScriptsAutoruns>
+      <CSV>Y:\Projects\BrightSign\html-virtual-keyboard\presentation</CSV>
+      <RFChannelScan>Y:\Projects\BrightSign\html-virtual-keyboard\presentation</RFChannelScan>
+      <Schedules>Y:\Projects\BrightSign\html-virtual-keyboard\presentation</Schedules>
+      <ReplacementMedia>Y:\Projects\BrightSign\html-virtual-keyboard\presentation</ReplacementMedia>
+      <UserVariables>Y:\Projects\BrightSign\html-virtual-keyboard\presentation</UserVariables>
+      <XModemFiles>Y:\Projects\BrightSign\html-virtual-keyboard\presentation</XModemFiles>
+      <ImportCommandFiles>Y:\Projects\BrightSign\html-virtual-keyboard\presentation</ImportCommandFiles>
     </DirectoryLocations>
     <graphicsZOrder>Front</graphicsZOrder>
   </meta>

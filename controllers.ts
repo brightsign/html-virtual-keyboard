@@ -10,7 +10,7 @@ bsApp.controller('bsController', function ($scope, $filter, $translate, bsState,
         return bsLayouts.getKeys(row);
     };
     $scope.getKey = function (key) {
-        if (key.length>1){
+        if (key.length > 1) {
             return $filter('translate')(key);
         } else {
             return key;
@@ -36,6 +36,8 @@ bsApp.controller('bsController', function ($scope, $filter, $translate, bsState,
                 break;
             case 'enter':
                 bsState.sendKey('ENTER');
+                $scope.upper = false;
+                $scope.loadLayout();
                 break;
             case 'bksp':
                 bsState.sendKey('BACKSPACE');
@@ -49,6 +51,8 @@ bsApp.controller('bsController', function ($scope, $filter, $translate, bsState,
                 $scope.loadLayout();
                 break;
             case 'cancel':
+                $scope.upper = false;
+                $scope.loadLayout();
                 bsState.hide();
                 break;
             case 'accept':
@@ -63,7 +67,7 @@ bsApp.controller('bsController', function ($scope, $filter, $translate, bsState,
         var layout = $scope.upper ? ($scope.alt ? 'alt-shift' : 'shift') : ($scope.alt ? 'alt' : 'normal');
         $scope.rows = bsLayouts.getLayout($scope.lang, layout);
     };
-    $scope.setLang=function(lang) {
+    $scope.setLang = function (lang) {
         $scope.lang = lang;
         $translate.use($scope.lang);
         $scope.loadLayout();
@@ -75,5 +79,28 @@ bsApp.controller('bsController', function ($scope, $filter, $translate, bsState,
     $scope.lang = 'en';
     $scope.upper = false;
     $scope.alt = false;
+
+
+    var portraitMode = $(window).width() < $(window).height();
+    var screenSize;
+    if (portraitMode) {
+        screenSize = $(window).height();
+    } else {
+        screenSize = $(window).width();
+    }
+    var textSize;
+    switch (screenSize) {
+        case 1920:
+            textSize = "1.6em";
+            break;
+        case 1280:
+            textSize = "1.2em";
+            break;
+        default:
+            textSize = "1em";
+    }
+
+
+    $scope.keyboardSize = {'font-size' : textSize};
     $scope.setLang($scope.lang);
 });
