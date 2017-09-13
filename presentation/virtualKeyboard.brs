@@ -36,6 +36,7 @@ Function virtualKeyboard_Initialize(msgPort As Object, userVariables As Object, 
         virtualKeyboard.setPort(m.msgPort)
 		m.virtualKeyboard = virtualKeyboard
 		m.rectangle = rectangle
+		m.virtualKeyboard.hide()
 	  endif
 
       if type(event) = "roVirtualKeyboardEvent" then
