@@ -8,10 +8,10 @@
     "event-stream": "^3.3.4",
     "gulp": "^4.0.2",
     "gulp-clean-css": "^4.2.0",
-    "gulp-if": "^2.0.2",
-    "gulp-ng-annotate": "^2.0.0"
+    "gulp-if": "^2.0.2"
   },
   "devDependencies": {
+    "gulp-ng-annotate": "^2.1.0",
     "gulp-uglify": "^3.0.2",
     "gulp-useref": "^3.1.6",
     "gulp-zip": "^5.0.0"
