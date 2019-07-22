@@ -17,9 +17,9 @@
     "tests"
   ],
   "dependencies": {
-    "bootstrap": "~3.3.6",
-    "angular": "~1.5.0",
-    "angular-translate": "~2.9.1",
-    "angular-sanitize": "^1.5.0"
+    "bootstrap": "3.3.6",
+    "angular": "1.5.0",
+    "angular-translate": "2.9.1",
+    "angular-sanitize": "1.5.0"
   }
 }

@@ -1,22 +1,21 @@
 var gulp = require('gulp');
-var mainBowerFiles = require('main-bower-files');
 var useref = require('gulp-useref');
-var clean = require('gulp-clean');
 var es = require('event-stream');
 var uglify = require('gulp-uglify');
-var minifyCss = require('gulp-minify-css');
+var minifyCss = require('gulp-clean-css');
 var ngAnnotate = require('gulp-ng-annotate');
 var gulpif = require('gulp-if');
 const zip = require('gulp-zip');
+var del = require('del');
 
 var dest = './dest';
 
-gulp.task('clean', function () {
-    return gulp.src(dest, {read: false})
-        .pipe(clean({force: true}));
-});
-gulp.task('useref', ['clean'], function () {
+function clean() {
+    return del(['dest']);
+}
 
+function userefHtml(cb){
+    cb();
     return es.merge(
         gulp.src(['bsvirtualkb.html'])
             .pipe(useref())
@@ -24,16 +23,22 @@ gulp.task('useref', ['clean'], function () {
         gulp.src(['autorun.brs', 'bsvirtualkb.json'])
             .pipe(gulp.dest(dest))
     );
-});
+}
 
-gulp.task('zip', ['clean'], function () {
+function zipFiles(){
     return gulp.src(['bsvirtualkb.html', 'bsvirtualkb.json'])
-        .pipe(useref())
-        .pipe(gulpif('*.js', ngAnnotate()))
-        .pipe(gulpif('*.js', uglify()))
-        .pipe(gulpif('*.css', minifyCss()))
-        .pipe(zip('keyboard.zip'))
-        .pipe(gulp.dest('./presentation'));
-});
+           .pipe(useref())
+           .pipe(gulpif('*.js', ngAnnotate()))
+           .pipe(gulpif('*.js', uglify()))
+           .pipe(gulpif('*.css', minifyCss()))
+           .pipe(zip('keyboard.zip'))
+           .pipe(gulp.dest('./presentation'));
+}
 
-gulp.task('default', ['clean', 'useref', 'zip']);
+var build = gulp.series(clean, userefHtml, zipFiles);
+
+exports.clean   = clean;
+exports.useref  = userefHtml;
+exports.zip     = zipFiles;
+
+exports.default = build;

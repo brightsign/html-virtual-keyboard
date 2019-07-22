@@ -8,8 +8,10 @@ How to build bsvirtualkb.html
 - Install npm (see http://blog.npmjs.org/post/85484771375/how-to-install-npm)
 - Run "npm update"
 - npm install -g bower
+- bower install
 
 - Run "gulp"
+    - gulp
 - This creates a "dest" directory containing:
     - bsvirtualkb.html (the main page)
     - autorun.brs that demonstrates how to use it
