@@ -10,10 +10,10 @@
     "gulp-clean-css": "^4.2.0",
     "gulp-if": "^2.0.2",
     "gulp-ng-annotate": "^2.0.0",
-    "gulp-uglify": "^3.0.0",
     "gulp-zip": "^4.0.0"
   },
   "devDependencies": {
+    "gulp-uglify": "^3.0.2",
     "gulp-useref": "^3.1.6"
   },
   "scripts": {
