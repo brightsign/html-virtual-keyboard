@@ -2,6 +2,10 @@ BrightSign HTML Virtual Keyboard
 ====================
 BrightSign virtual keyboard based on the [Mottie Keyboard](https://github.com/Mottie/Keyboard)
 
+How to use the virtual keyboard
+----------------
+Download the files `keyboard.zip` and `virtualKeyboard.brs` from our [latest release](https://github.com/kev-ac/html-virtual-keyboard/releases/latest)
+and continue reading [here](#brightauthor-plugin).
 
 How to build bsvirtualkb.html
 ----------------
