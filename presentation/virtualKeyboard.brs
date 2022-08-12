@@ -3,7 +3,7 @@ REM @title                   BrightSign Virtual Keyboard
 REM @author                  Lee Dydo
 REM @company                 BrightSign LLC.
 REM @date-created            06/06/2016
-REM @date-last-modified      07/05/2016
+REM @date-last-modified      08/11/2022
 REM
 Function virtualKeyboard_Initialize(msgPort As Object, userVariables As Object, bsp As Object)
   return {
