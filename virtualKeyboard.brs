@@ -5,6 +5,10 @@ REM @company                 BrightSign LLC.
 REM @date-created            06/06/2016
 REM @date-last-modified      06/07/2016
 REM
+
+' This is an example plugin script for the BrightSign Virtual Keyboard, used in your BA:Con presentation
+' For information on how to use this script, please see the readme in the github repo or this script's comments
+
 Function virtualKeyboard_Initialize(msgPort As Object, userVariables As Object, bsp As Object)
   return {
 	objectName :      "virtualKeyboard_object",
