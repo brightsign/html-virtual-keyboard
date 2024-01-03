@@ -40,7 +40,7 @@ Function virtualKeyboard_Initialize(msgPort As Object, userVariables As Object, 
       startY = Cint(height-rectY)
 
       ' Must fetch the monitor orientation to determine how to place and rotate the keyboard
-      monitorOrientation = m.bsp.sign.monitorOrientation
+      monitorOrientation = ""
       if m.bsp.sign.screens <> invalid then ' account for multiple screens
           colCount = m.bsp.sign.screens.count()
           rowCount = m.bsp.sign.screens[0].count()
