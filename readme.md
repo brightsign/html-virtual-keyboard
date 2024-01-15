@@ -20,7 +20,7 @@ BrightSign virtual keyboard based on the [Mottie Keyboard](https://github.com/Mo
     - css directory
     - js directory 
     - bsvirtualkb.json (see below)
-- This also creates "keyboard.zip" in the presentation directory   
+- This also creates "keyboard.zip" in the presentation directory
     
 ## bsvirtualkb.json
 
@@ -29,7 +29,7 @@ only languages supported are English and French.
 
 ## The plugin itself
 
-The script that defines the plugin to be used in BrightAuthor(:Connected) is `virtualKeyboard.brs`. This script is written so that the keyboard is dynamically sized and placed on the screen based on the screen's resolution. It also automatically rotates the keyboard based on the screen orientation selected in your presentation. Important variables in the plugin script are:
+The script that defines the plugin to be used in BrightAuthor(:Connected) is `virtualKeyboard.brs`, found in the presentation directory. This script is written so that the keyboard is dynamically sized and placed on the screen based on the screen's resolution. It also automatically rotates the keyboard based on the screen orientation selected in your presentation. Important variables in the plugin script are:
 
 - `startX`: top left x coordinate of the keyboard's rectangle
 - `startY`: top left y coordinate of the keyboard's rectangle
@@ -44,17 +44,17 @@ The script that defines the plugin to be used in BrightAuthor(:Connected) is `vi
 There are three important aspects that users of the keyboard may want to change. These aspects are: placement, size, and orientation. All three of these are editted in the plugin script `virtualKeyboard.brs`. Assuming you are using the script provided in this plugin - 
 
 To edit placement:
-- Change the `startX` and `startY` variables defined on lines 35-36
+- Change the `startX` and `startY` variables
 
 To edit size:
-- Change the `rectX` and `rectY` variables defined on lines 32-33
+- Change the `rectX` and `rectY` variables
 
 To edit orientation: 
 - Change the `transform` variable, defined based on the monitor orientation
 
 ## Deploying the plugin
 
-To integrate this plugin into BrightAuthor:Connected, obtain the `keyboard.zip` and `virtualKeyboard.brs` files from the "presentation" directory (the `virtualKeyboard.brs` found at the root of the directory is the same as the one in the presentation directory). Follow the following steps:
+To integrate this plugin into BrightAuthor:Connected, obtain the `keyboard.zip` and `virtualKeyboard.brs` files from the "presentation" directory. Follow the following steps:
 
 1. Navigate to __Presentation Settings > Support Content__
 2. Under __Support Content__ click the __+__ beside __Script Plugin__ to add the plugin

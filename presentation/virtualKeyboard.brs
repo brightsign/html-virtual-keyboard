@@ -28,16 +28,16 @@ Function virtualKeyboard_Initialize(msgPort As Object, userVariables As Object, 
 
         ' Need to do some math to get the correct rectangle for the virtual keyboard
         ' This is based on the proportions designed around native 1080p resolution
-        vidmode = createObject("roVideoMode")
+        vidmode = m.bsp.videomode
         width = vidmode.getResX()
         height = vidmode.getResY()
 
-        ' rectX and rectY are the dimensions of the keyboard
-        rectX = Cint(width*.3125) ' Using percentage adjustments based on the resolution allows for correct sizing regardless of res
-        rectY = Cint(height*.37)
-        ' startX and startY are the coordinates of the top left corner of the keyboard
-        startX = Cint((width-rectX)/2) ' Placing the keyboard on the bottom of the screen. Using the dimensions of the keyboard guarantee that the entire rectangle will be rendered onscreen
-        startY = Cint(height-rectY)
+        ' rectSizeX and rectSizeY are the dimensions of the keyboard
+        rectSizeX = Cint(width*.3125) ' Using percentage adjustments based on the resolution allows for correct sizing regardless of res
+        rectSizeY = Cint(height*.37)
+        ' startCoordX and startCoordY are the coordinates of the top left corner of the keyboard
+        startCoordX = Cint((width-rectSizeX)/2) ' Placing the keyboard on the bottom of the screen. Using the dimensions of the keyboard guarantee that the entire rectangle will be rendered onscreen
+        startCoordY = Cint(height-rectSizeY)
 
         ' Must fetch the monitor orientation to determine how to place and rotate the keyboard
         if m.bsp.sign.screens <> invalid then ' account for multiple screens
@@ -55,21 +55,21 @@ Function virtualKeyboard_Initialize(msgPort As Object, userVariables As Object, 
 
         ' Place, size and rotate the keyboard based on the monitor/tv orientation
         if monitorOrientation = "portrait" then
-          startXPortrait = Cint(width-rectY)
-          startYPortrait = Cint((height-rectX)/2)
-          rectangle = createobject("rorectangle",startXPortrait,startYPortrait,rectX,rectY)
+          startCoordXPortrait = Cint(width-rectSizeY)
+          startCoordYPortrait = Cint((height-rectSizeX)/2)
+          rectangle = createobject("rorectangle",startCoordXPortrait,startCoordYPortrait,rectSizeX,rectSizeY)
           transform = "rot90"
         else if monitorOrientation = "portraitbottomleft" then
-          rectangle = createobject("rorectangle",rectX,rectY/2,rectX,rectY)
+          rectangle = createobject("rorectangle",rectSizeX,rectSizeY/2,rectSizeX,rectSizeY)
           transform = "rot270"
         else if monitorOrientation = "portraitbottomonright" then
-          rectangle = createobject("rorectangle",rectX,rectY/2,rectX,rectY)
+          rectangle = createobject("rorectangle",rectSizeX,rectSizeY/2,rectSizeX,rectSizeY)
           transform = "rot90"
         else if monitorOrientation = "portraitbottomright" then
-          rectangle = createobject("rorectangle",rectX,rectY/2,rectX,rectY)
+          rectangle = createobject("rorectangle",rectSizeX,rectSizeY/2,rectSizeX,rectSizeY)
           transform = "rot90"
         else ' landscape
-          rectangle = createobject("rorectangle",startX,startY,rectX,rectY)
+          rectangle = createobject("rorectangle",startCoordX,startCoordY,rectSizeX,rectSizeY)
           transform = ""
         endif
 
