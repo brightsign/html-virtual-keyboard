@@ -41,17 +41,17 @@ Function virtualKeyboard_Initialize(msgPort As Object, userVariables As Object, 
 
         ' Must fetch the monitor orientation to determine how to place and rotate the keyboard
         if m.bsp.sign.screens <> invalid then ' account for multiple screens
-            colCount = m.bsp.sign.screens.count()
-            rowCount = m.bsp.sign.screens[0].count()
-            if colCount > 1 or rowCount > 1 then
-              print "virtualKeyboard_Initialize: warning - confirm the keyboard orientation is correct per screen"
-            end if
-
-            monitorOrientation = m.bsp.sign.screens[0][0].monitorOrientation
-            ' Here is where you would handle multiscreen keyboard orientation instances as needed
-          else
-            monitorOrientation = m.bsp.sign.monitorOrientation
+          colCount = m.bsp.sign.screens.count()
+          rowCount = m.bsp.sign.screens[0].count()
+          if colCount > 1 or rowCount > 1 then
+            print "virtualKeyboard_Initialize: warning - confirm the keyboard orientation is correct per screen"
           end if
+
+          monitorOrientation = m.bsp.sign.screens[0][0].monitorOrientation
+          ' Here is where you would handle multiscreen keyboard orientation instances as needed
+        else
+          monitorOrientation = m.bsp.sign.monitorOrientation
+        end if
 
         ' Place, size and rotate the keyboard based on the monitor/tv orientation
         if monitorOrientation = "portrait" then
@@ -93,7 +93,6 @@ Function virtualKeyboard_Initialize(msgPort As Object, userVariables As Object, 
         if type(data) = "roAssociativeArray" then
           if data.reason = "load-finished"
             m.virtualKeyboard = invalid
-            ?"load-finished test"
             m.virtualKeyboard = virtualKeyboard_Setup(m.rectangle, m.transform, m.msgPort)
             return false
           endif
