@@ -28,7 +28,12 @@ Function virtualKeyboard_Initialize(msgPort As Object, userVariables As Object, 
 
         ' Need to do some math to get the correct rectangle for the virtual keyboard
         ' This is based on the proportions designed around native 1080p resolution
-        vidmode = m.bsp.videomode
+        if m.bsp.vidmode <> invalid then
+          vidmode = m.bsp.videomode
+        else
+          vidmode = createObject("roVideoMode")
+        end if
+        
         width = vidmode.getResX()
         height = vidmode.getResY()
 
@@ -94,7 +99,7 @@ Function virtualKeyboard_Initialize(msgPort As Object, userVariables As Object, 
         if type(data) = "roAssociativeArray" then
           if data.reason = "load-finished"
             m.virtualKeyboard = invalid
-            m.virtualKeyboard = virtualKeyboard_Setup(m.rectangle, m.transform, m.msgPort)
+            m.virtualKeyboard = virtualKeyboard_Setup()
             return false
           endif
         endif
@@ -104,10 +109,10 @@ Function virtualKeyboard_Initialize(msgPort As Object, userVariables As Object, 
   }
 End Function
 
-Function virtualKeyboard_Setup(rectangle, transform, msgPort)
+Function virtualKeyboard_Setup()
 
-  virtualKeyboard = createObject("roVirtualKeyboard", rectangle)
-  virtualKeyboard.SetTransform(transform)
+  virtualKeyboard = createObject("roVirtualKeyboard", m.rectangle)
+  virtualKeyboard.SetTransform(m.transform)
   virtualKeyboard.setResource("file:///virtualKeyboard/bsvirtualkb.html")
   virtualKeyboard.setPort(m.msgPort)
 
