@@ -45,12 +45,13 @@ Function virtualKeyboard_Initialize(msgPort As Object, userVariables As Object, 
           rowCount = m.bsp.sign.screens[0].count()
           if colCount > 1 or rowCount > 1 then
             print "virtualKeyboard_Initialize: warning - confirm the keyboard orientation is correct per screen"
+            monitorOrientation = m.bsp.sign.screens[0][0].monitorOrientation
+            ' Here is where you would handle multiscreen keyboard orientation instances as needed  
+          else
+            monitorOrientation = m.bsp.sign.monitorOrientation
           end if
-
-          monitorOrientation = m.bsp.sign.screens[0][0].monitorOrientation
-          ' Here is where you would handle multiscreen keyboard orientation instances as needed
         else
-          monitorOrientation = m.bsp.sign.monitorOrientation
+          monitorOrientation = "landscape"
         end if
 
         ' Place, size and rotate the keyboard based on the monitor/tv orientation
