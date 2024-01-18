@@ -45,13 +45,20 @@ Function virtualKeyboard_Initialize(msgPort As Object, userVariables As Object, 
         startCoordY = Cint(height-rectSizeY)
 
         ' Must fetch the monitor orientation to determine how to place and rotate the keyboard
+        monitorOrientation = ""
         if m.bsp.sign.screens <> invalid then ' account for multiple screens
           colCount = m.bsp.sign.screens.count()
-          rowCount = m.bsp.sign.screens[0].count()
-          if colCount > 1 or rowCount > 1 then
-            print "virtualKeyboard_Initialize: warning - confirm the keyboard orientation is correct per screen"
-            monitorOrientation = m.bsp.sign.screens[0][0].monitorOrientation
-            ' Here is where you would handle multiscreen keyboard orientation instances as needed  
+          if m.bsp.sign.screens[0] <> invalid then
+            rowCount = m.bsp.sign.screens[0].count()
+            if colCount > 1 or rowCount > 1 then
+              print "virtualKeyboard_Initialize: warning - confirm the keyboard orientation is correct per screen"
+              monitorOrientation = m.bsp.sign.screens[0].monitorOrientation
+              ' Here is where you would handle multiscreen keyboard orientation instances as needed
+            else if rowCount > 1 and rowCount > 1 then
+              monitorOrientation = m.bsp.sign.screens[0][0].monitorOrientation 
+            else
+              monitorOrientation = m.bsp.sign.monitorOrientation
+            end if
           else
             monitorOrientation = m.bsp.sign.monitorOrientation
           end if
@@ -99,7 +106,7 @@ Function virtualKeyboard_Initialize(msgPort As Object, userVariables As Object, 
         if type(data) = "roAssociativeArray" then
           if data.reason = "load-finished"
             m.virtualKeyboard = invalid
-            m.virtualKeyboard = virtualKeyboard_Setup()
+            m.virtualKeyboard = virtualKeyboard_Setup(m.rectangle, m.transform, m.msgPort)
             return false
           endif
         endif
@@ -109,12 +116,12 @@ Function virtualKeyboard_Initialize(msgPort As Object, userVariables As Object, 
   }
 End Function
 
-Function virtualKeyboard_Setup()
+Function virtualKeyboard_Setup(rectangle, transform, msgPort)
 
-  virtualKeyboard = createObject("roVirtualKeyboard", m.rectangle)
-  virtualKeyboard.SetTransform(m.transform)
+  virtualKeyboard = createObject("roVirtualKeyboard", rectangle)
+  virtualKeyboard.SetTransform(transform)
   virtualKeyboard.setResource("file:///virtualKeyboard/bsvirtualkb.html")
-  virtualKeyboard.setPort(m.msgPort)
+  virtualKeyboard.setPort(msgPort)
 
   return virtualKeyboard
 end Function
