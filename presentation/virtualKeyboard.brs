@@ -3,7 +3,7 @@ REM @title                   BrightSign Virtual Keyboard
 REM @author                  Lee Dydo
 REM @company                 BrightSign LLC.
 REM @date-created            06/06/2016
-REM @date-last-modified      06/07/2016
+REM @date-last-modified      01/22/2024
 REM
 
 ' This is an example plugin script for the BrightSign Virtual Keyboard, used in your BA:Con presentation
@@ -28,7 +28,7 @@ Function virtualKeyboard_Initialize(msgPort As Object, userVariables As Object, 
 
         ' Need to do some math to get the correct rectangle for the virtual keyboard
         ' This is based on the proportions designed around native 1080p resolution
-        if m.bsp.vidmode <> invalid then
+        if m.bsp.videomode <> invalid then
           vidmode = m.bsp.videomode
         else
           vidmode = createObject("roVideoMode")
