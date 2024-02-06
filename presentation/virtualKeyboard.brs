@@ -38,8 +38,8 @@ Function virtualKeyboard_Initialize(msgPort As Object, userVariables As Object, 
         height = vidmode.getResY()
 
         ' rectSizeX and rectSizeY are the dimensions of the keyboard
-        rectSizeX = Cint(width*.3125) ' Using percentage adjustments based on the resolution allows for correct sizing regardless of res
-        rectSizeY = Cint(height*.37)
+        rectSizeX = Cint(width*.8) ' Using percentage adjustments based on the resolution allows for correct sizing regardless of res
+        rectSizeY = Cint(height*.65)
         ' startCoordX and startCoordY are the coordinates of the top left corner of the keyboard
         startCoordX = Cint((width-rectSizeX)/2) ' Placing the keyboard on the bottom of the screen. Using the dimensions of the keyboard guarantee that the entire rectangle will be rendered onscreen
         startCoordY = Cint(height-rectSizeY)
