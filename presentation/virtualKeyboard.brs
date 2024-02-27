@@ -73,14 +73,16 @@ Function virtualKeyboard_Initialize(msgPort As Object, userVariables As Object, 
           rectangle = createobject("rorectangle",startCoordXPortrait,startCoordYPortrait,rectSizeX,rectSizeY)
           transform = "rot90"
         else if monitorOrientation = "portraitbottomleft" then
-          rectangle = createobject("rorectangle",rectSizeX,rectSizeY/2,rectSizeX,rectSizeY)
-          transform = "rot270"
+          startCoordXPortrait = Cint(width-rectSizeY)
+          startCoordYPortrait = Cint((height-rectSizeX)/2)
+          rectangle = createobject("rorectangle",0,0,rectSizeX,rectSizeY)
+          transform = "rot90"
         else if monitorOrientation = "portraitbottomonright" then
           rectangle = createobject("rorectangle",rectSizeX,rectSizeY/2,rectSizeX,rectSizeY)
-          transform = "rot90"
+          transform = "rot270"
         else if monitorOrientation = "portraitbottomright" then
-          rectangle = createobject("rorectangle",rectSizeX,rectSizeY/2,rectSizeX,rectSizeY)
-          transform = "rot90"
+          rectangle = createobject("rorectangle",0,0,rectSizeX,rectSizeY)
+          transform = "rot270"
         else ' landscape
           rectangle = createobject("rorectangle",startCoordX,startCoordY,rectSizeX,rectSizeY)
           transform = ""
