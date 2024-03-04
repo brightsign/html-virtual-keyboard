@@ -1,3 +1,38 @@
+/* ========================================================================
+To update the size of the keyboard, a few CSS Attributes could be considered:
+- change the font-size of the .ui-keyboard div
+- change the font-size of the .btn and .language-menu
+- change the CSS values associated with the CSS Transform Scale attribute. 
+
+To update the location of the keyboard, a few CSS Attributes could be considered:
+- change the CSS Attributes top or left of the div.ui-keyboard-container
+=========================================================================== */
+
+.ui-keyboard div {
+    font-size: 1.1em;
+}
+
+/* .btn and .language-menu can control the overall size of the keyboard.   */
+.btn {
+    font-size: 1.6em;
+}
+
+.language-menu {
+    font-size: 1.6em;
+}
+
+/* Sinai */
+div.ui-keyboard-container {
+    position: fixed;
+    top: 70%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%) translateZ(0) scale(1.5, 1.5);
+    backface-visibility: hidden;
+    z-index: 100
+}
+/* Sinai */
+
 /* keyboard - jQuery UI Widget */
 .ui-keyboard {
     text-align: center;
@@ -10,10 +45,6 @@
 
 .ui-keyboard-has-focus {
     z-index: 16001;
-}
-
-.ui-keyboard div {
-    font-size: 1.1em;
 }
 
 .ui-keyboard-button {
@@ -364,16 +395,6 @@ button.ui-keyboard-extender span {
     }
 }
 
-/* Sinai */
-div.ui-keyboard-container {
-    position: fixed;
-    top: 80%;
-    left: 50%;
-    margin-right: -50%;
-    transform: translate(-50%, -50%) translateZ(0) scale(1.0, 1.0);
-    backface-visibility: hidden;
-    z-index: 100
-}
 /* Dydo */
 button.btn-default:active {
     -webkit-box-shadow: none;
@@ -406,14 +427,4 @@ button.btn-default:hover{
 #empty_background {
     width: 100%;
     height: 1920px;
-}
-
-
-/* These two values control the overall size of the keyboard.   */
-.btn {
-    font-size: 1.6em;
-}
-
-.language-menu {
-    font-size: 1.6em;
 }
